@@ -735,14 +735,84 @@ version: "3.5"
     <script src="assets/js/accordion.js"></script>
 
     <script>
-        // Formulario de postulación
+        
+        document.addEventListener('DOMContentLoaded', function() {
+          
+            const telefonoInput = document.getElementById('telefono');
+            if (telefonoInput) {
+                telefonoInput.addEventListener('input', function(e) {
+                   
+                    this.value = this.value.replace(/[^0-9]/g, '');
+                });
+                
+                telefonoInput.addEventListener('paste', function(e) {
+                    e.preventDefault();
+                    const paste = (e.clipboardData || window.clipboardData).getData('text');
+                    this.value = paste.replace(/[^0-9]/g, '');
+                });
+            }
+            
+            const textFields = [
+                'nombre',
+                'agencia',
+                'instagram',
+                'facebook',
+                'tiktok',
+                'sitioweb',
+                'colonias'
+            ];
+            
+            textFields.forEach(function(fieldId) {
+                const field = document.getElementById(fieldId);
+                if (field) {
+                    
+                    field.addEventListener('keydown', function(e) {
+                        if (e.key === ' ' || e.keyCode === 32) {
+                            const cursorPos = this.selectionStart;
+                            
+                            if (cursorPos === 0) {
+                                e.preventDefault();
+                                return false;
+                            }
+                        }
+                    });
+                    
+                    
+                    field.addEventListener('blur', function(e) {
+                        let value = this.value;
+                        
+                        value = value.replace(/\s+/g, ' ').trim();
+                        this.value = value;
+                    });
+                }
+            });
+            
+       
+            const descripcionField = document.getElementById('descripcion');
+            if (descripcionField) {
+                descripcionField.addEventListener('keydown', function(e) {
+                    
+                    if (e.key === ' ' && this.selectionStart === 0) {
+                        e.preventDefault();
+                    }
+                });
+                
+                descripcionField.addEventListener('blur', function(e) {
+                    let value = this.value;
+               
+                    value = value.replace(/\s+/g, ' ').trim();
+                    this.value = value;
+                });
+            }
+        });
+        
         document.getElementById("form-postulacion").addEventListener("submit", function (event) {
           event.preventDefault();
       
           const form = event.target;
           const formData = new FormData(form);
       
-          // Validar checkboxes requeridos
+         
           const tipoPropiedad = formData.getAll("tipo_propiedad");
           const operacion = formData.getAll("operacion");
           
@@ -770,11 +840,11 @@ version: "3.5"
           const submitBtn = form.querySelector('button[type="submit"]');
           const originalBtnHtml = submitBtn.innerHTML;
       
-          // Deshabilita botón y muestra "Enviando…"
+          
           submitBtn.disabled = true;
           submitBtn.innerHTML = "Enviando…";
       
-          // Loading con SweetAlert
+         
           Swal.fire({
             title: "Enviando tu postulación…",
             text: "Por favor espera un momento.",
@@ -823,7 +893,7 @@ version: "3.5"
           });
         });
 
-        // Formulario de curso (mantener por si acaso)
+        
         if (document.getElementById("FormCurso")) {
         document.getElementById("FormCurso").addEventListener("submit", function (event) {
           event.preventDefault();
@@ -831,17 +901,17 @@ version: "3.5"
           const form = event.target;
           const formData = new FormData(form);
       
-          // Solo por si en un futuro quieres personalizar el saludo:
+       
           const name = formData.get("name") || "";
       
           const submitBtn = document.getElementById("btn-submit");
           const originalBtnHtml = submitBtn.innerHTML;
       
-          // Deshabilita botón y muestra "Enviando…"
+          
           submitBtn.disabled = true;
           submitBtn.innerText = "Enviando…";
       
-          // Loading con SweetAlert
+         
           Swal.fire({
             title: "Enviando tu registro…",
             text: "Por favor espera un momento.",
@@ -859,7 +929,7 @@ version: "3.5"
           })
           .then((response) => response.text())
           .then((text) => {
-            // Cierra el loading
+           
             Swal.close();
       
             Swal.fire({
