@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from edutics.temptics.com/event-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2025 23:06:34 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edutics</title>
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+
+    <!-- plugins & libraries css -->
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/vendor/font-awesome/all.min.css">
+
+    <!-- tailwind css -->
+    <link rel="stylesheet" href="src/output.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="ed-overlay group">
+        <div class="fixed inset-0 z-[100] group-[.active]:bg-edblue/80 duration-[400ms] pointer-events-none group-[.active]:pointer-events-auto"></div>
+    </div>
+
+    <!-- cart -->
+    <div class="ed-cart-bar group">
+        <div class="w-[420px] max-w-full fixed z-[100] right-0 top-0 h-full bg-white flex flex-col translate-x-[100%] duration-[400ms] group-[.active]:translate-x-0">
+            <!-- heading -->
+            <div class="flex items-center justify-between px-[25px] border-b border-edgray/20 pb-[23px] pt-[22px]">
+                <h5 class="text-[20px]">My Cart List</h5>
+                <h6>(03 Items)</h6>
+            </div>
+
+            <!-- cart items -->
+            <div>
+                <!-- single cart item -->
+                <div class="flex items-center gap-[20px] py-[30px] px-[25px] border-b border-edgray/20">
+                    <img src="assets/img/cart-item-1.jpg" alt="Cart Item Image" class="rounded-[10px] shrink-0">
+                    <div class="grow">
+                        <h6 class="font-medium text-[18px] text-edblue"><a href="course-details.html" class="hover:text-edpurple">Web Development</a></h6>
+                        <h6 class="font-medium text-edgray">$15.00</h6>
+                    </div>
+                    <button class="text-[20px] text-edgray shrink-0 hover:text-edpurple">x</button>
+                </div>
+
+                <!-- single cart item -->
+                <div class="flex items-center gap-[20px] py-[30px] px-[25px] border-b border-edgray/20">
+                    <img src="assets/img/cart-item-2.jpg" alt="Cart Item Image" class="rounded-[10px] shrink-0">
+                    <div class="grow">
+                        <h6 class="font-medium text-[18px] text-edblue"><a href="course-details.html" class="hover:text-edpurple">Digital Marketing</a></h6>
+                        <h6 class="font-medium text-edgray">$15.00</h6>
+                    </div>
+                    <button class="text-[20px] text-edgray shrink-0 hover:text-edpurple">x</button>
+                </div>
+
+                <!-- single cart item -->
+                <div class="flex items-center gap-[20px] py-[30px] px-[25px] border-b border-edgray/20">
+                    <img src="assets/img/cart-item-3.jpg" alt="Cart Item Image" class="rounded-[10px] shrink-0">
+                    <div class="grow">
+                        <h6 class="font-medium text-[18px] text-edblue"><a href="course-details.html" class="hover:text-edpurple">WordPress Development</a></h6>
+                        <h6 class="font-medium text-edgray">$15.00</h6>
+                    </div>
+                    <button class="text-[20px] text-edgray shrink-0 hover:text-edpurple">x</button>
+                </div>
+            </div>
+
+            <!-- cart bottom -->
+            <div class="mt-auto px-[25px] mb-[30px]">
+                <div class="flex items-center justify-between font-medium text-[18px] text-edblue mb-[33px]">
+                    <span>Total</span>
+                    <span>$999</span>
+                </div>
+                <div class="space-y-[15px]">
+                    <a href="#" class="ed-btn w-full !rounded-[10px] !bg-transparent border border-edblue !text-edblue hover:!bg-edblue hover:!text-white">Proceed to checkout</a>
+                    <a href="#" class="ed-btn w-full !rounded-[10px]">Proceed to checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- search -->
+    <div class="ed-search group">
+        <form action="#" class="bg-white fixed z-[100] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] h-[100px] md:h-[70px] xxs:h-[50px] w-[1224px] max-w-[95%] flex gap-[10px] rounded-full overflow-hidden px-[40px] xxs:px-[20px] pointer-events-none opacity-0 group-[.active]:pointer-events-auto group-[.active]:opacity-100 duration-[400ms]">
+            <input type="search" name="ed-search" placeholder="Search Here..." class="bg-transparent w-full focus:outline-none">
+            <button class="text-[25px] md:text-[22px] xxs:text-[20px]"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </div>
+
+    <!-- sidebar -->
+    <div class="ed-sidebar">
+        <div class="translate-x-[100%] transition-transform ease-linear duration-300 fixed right-0 w-full max-w-[25%] xl:max-w-[30%] lg:max-w-[40%] md:max-w-[50%] sm:max-w-[60%] xxs:max-w-full bg-white h-full z-[100] overflow-auto">
+            <!-- heading -->
+            <div class="ed-sidebar-heading p-[20px] lg:p-[20px] border-b border-edgray/20">
+                <div class="logo flex justify-between items-center">
+                    <a href="index-2.html"><img src="assets/img/logo.png" alt="logo"></a>
+
+                    <button type="button" class="ed-sidebar-close-btn border border-edgray/20 w-[45px] aspect-square shrink-0 text-black text-[22px] rounded-full hover:text-edpurple"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+
+            <!-- mobile menu -->
+            <div class="ed-header-nav-in-mobile"></div>
+        </div>
+    </div>
+
+
+    <!-- HEADER SECTION START -->
+    <header class="absolute z-[99] top-0 inset-x-[100px] xxl:inset-x-[30px] xl:inset-x-0 bg-white rounded-bl-[10px] rounded-br-[10px]">
+        <!-- top header -->
+        <div class="bg-edblue flex items-center justify-between lg:justify-center lg:gap-x-[20px]">
+            <!-- contacts -->
+            <div class="flex items-center gap-x-[32px] xl:gap-x-[15px] gap-y-[6px] py-[18px] pl-[30px] xl:pl-[10px] lg:pl-0 lg:order-2 sm:pt-0 sm:pb-[10px] xl:hidden">
+                <!-- single contact -->
+                <a href="mailto:info@example.com" class="flex items-center gap-x-[10px] font-light text-white/80">
+                    <span class="icon shrink-0 xl:hidden">
+                        <img src="assets/img/icon/mail.svg" alt="icon">
+                    </span>
+                    <span>info@example.com</span>
+                </a>
+                <!-- single contact -->
+                <a href="tel:+20866660112" class="flex items-center gap-x-[10px] font-light text-white/80">
+                    <span class="icon shrink-0 xl:hidden">
+                        <img src="assets/img/icon/phone.svg" alt="icon">
+                    </span>
+                    <span>+208-6666-0112</span>
+                </a>
+            </div>
+
+            <!-- notice -->
+            <p class="font-medium text-white text-[16px] xxs:text-[14px] xl:pl-[15px] lg:order-1 lg:w-full lg:my-[10px] text-center lg:text-left sm:text-center">Edutics Flash Discount: Starting at <span class="text-edyellow">$3.49/mo</span> for a Limited time</p>
+
+            <!-- actions -->
+            <div class="shrink-0 flex items-center gap-x-[30px] xl:gap-x-[15px] text-white lg:order-3 sm:hidden">
+                <div class="flex gap-x-[30px] xl:gap-x-[15px]">
+                    <a href="#" class="flex items-center gap-x-[10px] font-light text-white/80"><span class="icon shrink-0"><img src="assets/img/icon/chat.svg" alt="icon"></span> Live Chat</a>
+                    <a href="#" class="flex items-center gap-x-[10px] font-light text-white/80"><span class="icon shrink-0"><img src="assets/img/icon/avatar.svg" alt="icon"></span> Login</a>
+                </div>
+                <a href="#" class="ed-btn !h-[60px] !rounded-none sm:!px-[15px]">Guardian Access</a>
+            </div>
+        </div>
+
+        <!-- bottom header -->
+        <div class="px-[30px] xxl:px-[15px] lg:px-[20px] py-[28px] lg:py-[18px] flex justify-between to-be-fixed">
+            <div class="logo xxs:max-w-[40%]"><a href="index-2.html"><img src="assets/img/logo.png" alt="logo" class="logo"></a></div>
+
+            <div class="flex lg:items-center lg:gap-[60px] xxs:gap-[30px]">
+                <div class="flex items-center gap-[100px] xl:gap-[30px] lg:gap-y-0">
+                    <!-- nav -->
+                    <div class="ed-header-nav-container">
+                        <ul class="to-go-to-sidebar-in-mobile ed-header-nav flex lg:flex-col gap-x-[43px] xl:gap-x-[33px] font-kanit text-[17px] font-normal">
+                            <li class="has-sub-menu relative">
+                                <a role="button">Home</a>
+
+                                <ul class="ed-header-submenu">
+                                    <li><a href="index-2.html">Home</a></li>
+                                    <li><a href="index-3.html">Home 02</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="about.html">About us</a></li>
+                            <li class="has-sub-menu relative">
+                                <a role="button">Courses</a>
+
+                                <ul class="ed-header-submenu">
+                                    <li><a href="course-grid.html">Courses Grid</a></li>
+                                    <li><a href="course-filter.html">Courses Filter</a></li>
+                                    <li><a href="course-details.html">Course Details</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-sub-menu relative">
+                                <a role="button">Pages</a>
+
+                                <ul class="ed-header-submenu">
+                                    <li><a href="teachers.html">Teachers</a></li>
+                                    <li><a href="teacher-details.html">Teacher Details</a></li>
+                                    <li><a href="events.html">Events</a></li>
+                                    <li><a href="events-2.html">Events V.2</a></li>
+                                    <li><a href="event-details.html">Event Details</a></li>
+                                    <li><a href="gallery.html">Gallery</a></li>
+                                    <li><a href="faq.html">FAQ</a></li>
+                                    <li><a href="coming-soon.html">Coming Soon Page</a></li>
+                                    <li><a href="404.html">Error 404</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-sub-menu relative">
+                                <a role="button">News</a>
+
+                                <ul class="ed-header-submenu">
+                                    <li><a href="news-grid.html">News Grid</a></li>
+                                    <li><a href="news-list.html">News List</a></li>
+                                    <li><a href="news-details.html">News Details</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.html">Contact us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- right actions -->
+                    <div class="flex items-center gap-x-[60px] xxs:gap-[30px]">
+                        <button class="ed-search-opener-btn group">
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <path d="M15.962 15.9063L12.0216 12.0025C13.0011 10.8356 13.5911 9.33716 13.5911 7.70448C13.5911 3.992 10.5427 0.97168 6.79561 0.97168C3.04849 0.97168 0 3.992 0 7.70448C0 11.4167 3.04849 14.4368 6.79561 14.4368C8.44348 14.4368 9.95601 13.8523 11.1338 12.8819L15.0743 16.7858C15.1968 16.9072 15.3575 16.9679 15.5181 16.9679C15.6788 16.9679 15.8395 16.9072 15.9621 16.7858C16.2072 16.5429 16.2072 16.1491 15.962 15.9063ZM1.25549 7.70448C1.25549 4.67786 3.74076 2.21553 6.79561 2.21553C9.85038 2.21553 12.3356 4.67786 12.3356 7.70448C12.3356 10.7309 9.85038 13.1929 6.79561 13.1929C3.74076 13.1929 1.25549 10.7309 1.25549 7.70448Z" class="fill-edblue group-hover:fill-edpurple" />
+                                </g>
+                            </svg>
+                        </button>
+                        <button class="ed-cart-opener-btn group">
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <path d="M12.9894 13.6354H6.93871C6.06616 13.6354 5.2925 13.0682 5.05637 12.2557L3.01122 5.38995C2.93856 5.14134 2.69705 4.97072 2.42122 4.97072H0.818742C0.446713 4.97072 0.145996 4.67212 0.145996 4.30421C0.145996 3.93629 0.446713 3.6377 0.818742 3.6377H2.42122C3.29377 3.6377 4.06676 4.2049 4.30289 5.01737L4.68568 6.30374H14.9753C15.3951 6.30374 15.7934 6.50169 16.0403 6.83361C16.2852 7.16287 16.3558 7.57477 16.234 7.96402L14.8462 12.3283C14.5744 13.1161 13.8296 13.6354 12.9894 13.6354Z" class="fill-edblue group-hover:fill-edpurple" />
+                                    <path d="M7.54617 16.9687C6.80414 16.9687 6.20068 16.3707 6.20068 15.6353C6.20068 14.9 6.80414 14.302 7.54617 14.302C8.28821 14.302 8.89167 14.9 8.89167 15.6353C8.89167 16.3707 8.28821 16.9687 7.54617 16.9687Z" class="fill-edblue group-hover:fill-edpurple" />
+                                    <path d="M12.2556 16.9687C11.5136 16.9687 10.9102 16.3707 10.9102 15.6353C10.9102 14.9 11.5136 14.302 12.2556 14.302C12.9977 14.302 13.6011 14.9 13.6011 15.6353C13.6011 16.3707 12.9977 16.9687 12.2556 16.9687Z" class="fill-edblue group-hover:fill-edpurple" />
+                                </g>
+                            </svg>
+                        </button>
+                        <a href="contact.html" class="ed-btn to-go-to-sidebar-in-mobile lg:m-[20px]">apply now</a>
+                    </div>
+                </div>
+
+                <!-- mobile menu button -->
+                <button type="button" class="ed-mobile-menu-open-btn hidden lg:inline-block text-edblue text-[18px]"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+    <!-- HEADER SECTION END -->
+
+
+    <main>
+        <!-- BREADCRUMB SECTION START -->
+        <section class="pt-[327px] xl:pt-[287px] lg:pt-[237px] sm:pt-[200px] xxs:pt-[180px] pb-[158px] xl:pb-[118px] lg:pb-[98px] sm:pb-[68px] xs:pb-[48px] text-center bg-[url('assets/img/breadcrumb-bg.jpg')] bg-no-repeat bg-cover bg-center relative z-[1] overflow-hidden before:absolute before:-z-[1] before:inset-0 before:bg-edblue/70 before:pointer-events-none">
+            <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
+                <h1 class="font-semibold text-[clamp(35px,6vw,56px)] text-white">Event Details</h1>
+                <ul class="flex items-center justify-center gap-[10px] text-white">
+                    <li><a href="index-2.html" class="text-edyellow">Home</a></li>
+                    <li><span class="text-[12px]"><i class="fa-solid fa-angle-double-right"></i></span></li>
+                    <li>Event Details</li>
+                </ul>
+            </div>
+
+            <div class="vectors">
+                <img src="assets/img/breadcrumb-vector-1.svg" alt="vector" class="absolute -z-[1] pointer-events-none bottom-[34px] left-0 xl:left-auto xl:right-[90%]">
+                <img src="assets/img/breadcrumb-vector-2.svg" alt="vector" class="absolute -z-[1] pointer-events-none bottom-0 right-0 xl:right-auto xl:left-[60%]">
+            </div>
+        </section>
+        <!-- BREADCRUMB SECTION END -->
+
+
+        <!-- main content -->
+        <div class="et-event-details-content py-[130px] lg:py-[80px] md:py-[60px]">
+            <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
+                <div class="flex gap-[30px] lg:gap-[20px] md:flex-col md:items-center">
+                    <!-- left content -->
+                    <div class="left max-w-full">
+                        <!-- img -->
+                        <div class="relative rounded-[8px] overflow-hidden mb-[30px]">
+                            <img src="assets/img/event-details-img.jpg" alt="event-details-img" class="rounded-[8px]">
+                            <!-- hall number tag -->
+                            <span class="absolute top-[20px] left-[20px] bg-edpurple rounded-[6px] text-white px-[12px] py-[5px] inline-block font-semibold text-[16px]">Hall No: 59</span>
+                        </div>
+
+                        <!-- txt -->
+                        <div>
+                            <!-- infos -->
+                            <div class="flex flex-wrap gap-x-[16px] gap-y-[8px]">
+                                <div class="inline-flex items-center gap-[8px] rounded-[6px] px-[8px] py-[7px] font-semibold bg-edpurple text-white">
+                                    <span class="icon"><img src="assets/img/icon/calender.svg" alt="icon"></span>
+                                    <span>October 20, 2024</span>
+                                </div>
+                                <div class="inline-flex items-center gap-[8px] rounded-[6px] px-[8px] py-[7px] font-semibold border border-edpurple text-edpurple">
+                                    <span class="icon"><img src="assets/img/icon/clock-purple.svg" alt="icon"></span>
+                                    <span>10:00 AM – 2.00 PM</span>
+                                </div>
+                            </div>
+
+                            <h4 class="text-[30px] xs:text-[25px] xxs:text-[22px] font-semibold text-edblue mb-[11px] mt-[27px]">Let’s spend summer together with your teachers</h4>
+
+                            <p class="font-normal text-[16px] text-edgray mb-[15px]">Consectetur adipisicing elit, sed do eiusmod tempor is incididunt ut labore et dolore of magna aliqua. Ut enim ad minim veniam, made of owl the quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea dolor commodo consequat. Duis aute irure and dolor in reprehenderit.</p>
+
+                            <p class="font-normal text-[16px] text-edgray">The is ipsum dolor sit amet consectetur adipiscing elit. Fusce eleifend porta arcu In hac augu ehabitasse the is platea augue thelorem turpoi dictumst. In lacus libero faucibus at malesuada sagittis placerat eros sed istincidunt augue ac ante rutrum sed the is sodales augue consequat.</p>
+
+                            <h4 class="text-[30px] xs:text-[25px] xxs:text-[22px] font-semibold text-edblue mb-[11px] mt-[19px]">Requirements for the event</h4>
+
+                            <p class="font-light text-[16px] text-etGray mb-[21px]">Nulla facilisi. Vestibulum tristique sem in eros eleifend imperdiet. Donec quis convallis neque. In id lacus pulvinar lacus, eget vulputate lectus. Ut viverra bibendum lorem, at tempus nibh mattis in. Sed a massa eget lacus consequat auctor.</p>
+
+                            <ul class="ed-inner-about-list font-medium text-[16px] text-edgray max-w-full grid grid-cols-2 sm:grid-cols-1 gap-x-[30px] xxs:gap-x-[15px] gap-y-[9px] mb-[37px] *:pl-[25px] *:relative *:before:absolute *:before:left-0 *:before:top-[4px] *:before:w-[15px] *:before:aspect-square *:before:bg-[url(../assets/img/icon/checkmark.svg)] *:before:bg-no-repeat *:before:bg-[length:15px_13px] *:before:bg-center">
+                                <li>Ut viverra bibendum lorem, at tempus nibh</li>
+                                <li>Duis aute irure and dolor in reprehenderit.</li>
+                                <li>quis nostrud exercitation ullamco laboris </li>
+                                <li>ante rutrum sed the is sodales augue </li>
+                            </ul>
+
+                            <div class="grid grid-cols-2 xxs:grid-cols-1 gap-[30px] lg:gap-[20px] mt-[38px] mb-[33px]">
+                                <img src="assets/img/event-details-img-2.jpg" alt="event-details-img" class="max-h-[306px] w-full object-cover rounded-[8px]">
+                                <img src="assets/img/event-details-img-3.jpg" alt="event-details-img" class="max-h-[306px] w-full object-cover rounded-[8px]">
+                            </div>
+
+                            <p class="font-light text-[16px] text-etGray mb-[43px]">Consectetur adipisicing elit, sed do eiusmod tempor is incididunt ut labore et dolore of magna aliqua. Ut enim ad minim veniam, made of owl the quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea dolor commodo consequat. Duis aute irure and dolor in reprehenderit.</p>
+                        </div>
+
+
+                        <!-- actions -->
+                        <div class="border-t border-[#d9d9d9] pt-[24px] flex items-center xxs:flex-col gap-[20px]">
+                            <a href="#" class="inline-flex items-center h-[56px] rounded-[8px] bg-edpurple px-[24px] text-[17px] font-semibold text-white gap-[10px] hover:bg-edblue">Register Yourself <i class="fa-arrow-right-long fa-solid"></i></a>
+                            <div class="flex gap-[12px]">
+                                <span class="icon bg-edpurple w-[50px] text-[18px] aspect-square rounded-full outline-[2px] outline outline-white -outline-offset-[3px] flex items-center justify-center text-white">
+                                    <i class="fa-solid fa-phone-volume"></i>
+                                </span>
+
+                                <span class="txt font-semibold text-etBlack">
+                                    <span class="block text-[14px] mb-[2px]">Call Us Now</span>
+                                    <a href="tel:+208-555-0112" class="text-[18px] hover:text-etBlue">+208-555-0112</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- right sidebar -->
+                    <div class="right max-w-full w-[370px] lg:w-[360px] shrink-0 space-y-[30px]">
+                        <!-- EVENT INFORMATION -->
+                        <div class="border border-[#e5e5e5] rounded-[10px] px-[30px] xxs:px-[15px] py-[35px] xxs:py-[25px]">
+                            <h5 class="font-semibold text-[24px] text-edblue mb-[20px]">Event Information:</h5>
+
+                            <ul class="mb-[30px]">
+                                <li class="py-[15px] flex flex-wrap gap-[10px] items-center justify-between border-t border-[#e5e5e5] last:border-b">
+                                    <span class="flex items-center gap-[5px] font-semibold text-edblue">
+                                        <span class="icon"><img src="assets/img/icon/calender-purple.svg" alt="icon"></span>
+                                        <span>Start Date:</span>
+                                    </span>
+                                    <span class="text-[15px] text-edgray">October 20, 2024</span>
+                                </li>
+
+                                <li class="py-[15px] flex flex-wrap gap-[10px] items-center justify-between border-t border-[#e5e5e5] last:border-b">
+                                    <span class="flex items-center gap-[5px] font-semibold text-edblue">
+                                        <span class="icon"><img src="assets/img/icon/clock-purple.svg" alt="icon"></span>
+                                        <span>Duration:</span>
+                                    </span>
+                                    <span class="text-[15px] text-edgray">09:00am - 05:00pm</span>
+                                </li>
+
+                                <li class="py-[15px] flex flex-wrap gap-[10px] items-center justify-between border-t border-[#e5e5e5] last:border-b">
+                                    <span class="flex items-center gap-[5px] font-semibold text-edblue">
+                                        <span class="icon"><img src="assets/img/icon/location-dot.svg" alt="icon"></span>
+                                        <span>Location:</span>
+                                    </span>
+                                    <span class="text-[15px] text-edgray">6391 Elgin St. Celina, USA</span>
+                                </li>
+
+                                <li class="py-[15px] flex flex-wrap gap-[10px] items-center justify-between border-t border-[#e5e5e5] last:border-b">
+                                    <span class="flex items-center gap-[5px] font-semibold text-edblue">
+                                        <span class="icon"><img src="assets/img/icon/phone-volume.svg" alt="icon"></span>
+                                        <span>Phone:</span>
+                                    </span>
+                                    <span class="text-[15px] text-edgray">319-555-1225</span>
+                                </li>
+
+                                <li class="py-[15px] flex flex-wrap gap-[10px] items-center justify-between border-t border-[#e5e5e5] last:border-b">
+                                    <span class="flex items-center gap-[5px] font-semibold text-edblue">
+                                        <span class="icon"><img src="assets/img/icon/mail-purple.svg" alt="icon"></span>
+                                        <span>Email:</span>
+                                    </span>
+                                    <span class="text-[15px] text-edgray">Info@gmail.com</span>
+                                </li>
+
+                                <li class="py-[15px] flex flex-wrap gap-[10px] items-center justify-between border-t border-[#e5e5e5] last:border-b">
+                                    <span class="flex items-center gap-[5px] font-semibold text-edblue">
+                                        <span class="icon"><img src="assets/img/icon/globe.svg" alt="icon"></span>
+                                        <span>Language:</span>
+                                    </span>
+                                    <span class="text-[15px] text-edgray">English</span>
+                                </li>
+                            </ul>
+
+                            <a href="#" class="ed-btn gap-[10px] !h-[56px] !rounded-[8px] w-full">Get Ticket Now <span><i class="fa-solid fa-arrow-right-long"></i></span></a>
+
+                            <!-- social links -->
+                            <div class="flex gap-[28px] items-center justify-center mt-[22px]">
+                                <h6 class="font-semibold text-[16px] text-black">Share:</h6>
+                                <div class="flex gap-[15px] text-[16px]">
+                                    <a href="#" class="text-[#757277] hover:text-edpurple"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#" class="text-[#757277] hover:text-edpurple"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="#" class="text-[#757277] hover:text-edpurple"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    <a href="#" class="text-[#757277] hover:text-edpurple"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- location map -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1825.3318974837207!2d90.4133514479341!3d23.794983684888223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7a494861707%3A0x59ab371b6ff2e0fd!2zR3Vsc2hhbiBTcXVhcmUg4KaX4KeB4Kay4Ka24Ka-4KaoIOCmuOCnjeCmleCmr-CmvOCmvuCmsA!5e0!3m2!1sen!2sbd!4v1710998994716!5m2!1sen!2sbd" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-[280px] rounded-[5px]"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER SECTION START -->
+    <footer class="bg-edblue relative z-[1] before:absolute before:inset-0 before:-z-[1] before:bg-[url('assets/img/footer-bg.jpg')] before:opacity-[7%] before:bg-no-repeat before:bg-cover before:bg-center text-white">
+        <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
+            <!-- footer top -->
+            <div class="flex flex-wrap justify-between gap-[35px] pt-[100px] pb-[58px] border-b border-white/20">
+                <!-- footer about -->
+                <div class="max-w-[370px] xxs:max-w-full">
+                    <a href="index-2.html" class="inline-block mb-[23px]"><img src="assets/img/logo-light.png" alt="logo"></a>
+                    <p class="text-[#D9D9D9] mb-[19px]">Nullam interdum libero vitae pretium aliquam donec nibh purus laoreet in ullamcorper vel malesuada sit amet enim.</p>
+
+                    <ul class="space-y-[17px]">
+                        <li class="flex items-center gap-[8px]">
+                            <span class="icon"><img src="assets/img/call-icon-yellow.svg" alt="icon"></span>
+                            <a href="tel:+6108-666-0112" class="hover:text-edyellow">+6108-666-0112</a>
+                        </li>
+
+                        <li class="flex items-center gap-[8px]">
+                            <span class="icon"><img src="assets/img/message-yellow.svg" alt="icon"></span>
+                            <a href="mailto:info@gmail.com" class="hover:text-edyellow">info@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- footer widget -->
+                <div>
+                    <h6 class="font-semibold text-[18px] pb-[15px] mb-[30px] relative before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-[20px] before:bg-edyellow after:absolute after:bottom-0 after:left-[30px] after:h-[1.5px] after:w-[63px] after:bg-white">Quick Links</h6>
+
+                    <div class="space-y-[18px]">
+                        <a href="#" class="flex items-center gap-[10px] opacity-80 hover:text-edyellow"><span class="icon"><img src="assets/img/double-arrow.svg" alt="icon"></span> Edutics About</a>
+                        <a href="#" class="flex items-center gap-[10px] opacity-80 hover:text-edyellow"><span class="icon"><img src="assets/img/double-arrow.svg" alt="icon"></span> Contact Us</a>
+                        <a href="#" class="flex items-center gap-[10px] opacity-80 hover:text-edyellow"><span class="icon"><img src="assets/img/double-arrow.svg" alt="icon"></span> Blog & News</a>
+                        <a href="#" class="flex items-center gap-[10px] opacity-80 hover:text-edyellow"><span class="icon"><img src="assets/img/double-arrow.svg" alt="icon"></span> FAQ’S</a>
+                        <a href="#" class="flex items-center gap-[10px] opacity-80 hover:text-edyellow"><span class="icon"><img src="assets/img/double-arrow.svg" alt="icon"></span> Login / Register</a>
+                    </div>
+                </div>
+
+                <!-- footer widget -->
+                <div>
+                    <h6 class="font-semibold text-[18px] pb-[15px] mb-[30px] relative before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-[20px] before:bg-edyellow after:absolute after:bottom-0 after:left-[30px] after:h-[1.5px] after:w-[63px] after:bg-white">Main Navigation</h6>
+
+                    <div class="space-y-[18px]">
+                        <a href="#" class="flex items-center gap-[10px] opacity-80 hover:text-edyellow"><span class="icon"><img src="assets/img/double-arrow.svg" alt="icon"></span> Admission</a>
+                        <a href="#" class="flex items-center gap-[10px] opacity-80 hover:text-edyellow"><span class="icon"><img src="assets/img/double-arrow.svg" alt="icon"></span> Research</a>
+                        <a href="#" class="flex items-center gap-[10px] opacity-80 hover:text-edyellow"><span class="icon"><img src="assets/img/double-arrow.svg" alt="icon"></span> Academics</a>
+                        <a href="#" class="flex items-center gap-[10px] opacity-80 hover:text-edyellow"><span class="icon"><img src="assets/img/double-arrow.svg" alt="icon"></span> Student Life</a>
+                        <a href="#" class="flex items-center gap-[10px] opacity-80 hover:text-edyellow"><span class="icon"><img src="assets/img/double-arrow.svg" alt="icon"></span> Conferences</a>
+                    </div>
+                </div>
+
+                <!-- footer widget -->
+                <div class="max-w-[300px]">
+                    <h6 class="font-semibold text-[18px] pb-[15px] mb-[30px] relative before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-[20px] before:bg-edyellow after:absolute after:bottom-0 after:left-[30px] after:h-[1.5px] after:w-[63px] after:bg-white">Newsletter</h6>
+
+                    <div>
+                        <p class="text-[#d9d9d9]/80 mb-[21px]">Sign up to seargin weekly newsletter to get the latest updates.</p>
+
+                        <!-- newsltr form -->
+                        <form class="border border-white/20 rounded-full flex h-[56px] p-[4px]">
+                            <input type="email" name="email" placeholder="Enter Email Address" class="text-[14px] bg-transparent w-full rounded-full focus:outline-none px-[20px]">
+                            <button class="bg-edyellow rounded-full aspect-square flex items-center justify-center hover:bg-edpurple"><img src="assets/img/icon/submit-icon.svg" alt="icon"></button>
+                        </form>
+
+                        <!-- social links -->
+                        <div class="flex gap-[20px] mt-[30px]">
+                            <span class="pl-[30px] font-medium text-[#d9d9d9] relative before:absolute before:left-0 before:top-[50%] before:-translate-y-[50%] before:h-[1px] before:w-[20px] before:bg-[#d9d9d9]">Follow on</span>
+                            <span class="inline-flex gap-[16px] text-[#d9d9d9]">
+                                <a href="#" class="hover:text-edyellow"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#" class="hover:text-edyellow"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" class="hover:text-edyellow"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="#" class="hover:text-edyellow"><i class="fa-brands fa-youtube"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer bottom -->
+            <div class="flex flex-wrap items-center justify-between gap-[15px] pt-[20px] pb-[50px] text-[#d9d9d9]">
+                <p>&copy; All Copyright 2024 by Edutics</p>
+
+                <div class="flex flex-wrap gap-[40px] xxs:gap-[15px]">
+                    <a href="#" class="hover:text-edyellow">Terms & Conditions</a>
+                    <a href="#" class="hover:text-edyellow">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER SECTION END -->
+
+    <!-- js -->
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/fslightbox/fslightbox.js"></script>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/accordion.js"></script>
+</body>
+
+
+<!-- Mirrored from edutics.temptics.com/event-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jun 2025 23:06:36 GMT -->
+</html>
