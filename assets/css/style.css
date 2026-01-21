@@ -482,4 +482,51 @@ input[type="file"]:hover {
   margin-bottom: 8px;
 }
 
+/* Estilos para columnas de info postulación */
+.info-postulacion-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-postulacion-col h3 {
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.info-postulacion-col h4 {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.info-postulacion-col p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.info-postulacion-col ul {
+  color: rgba(255, 255, 255, 0.9);
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.info-postulacion-col ul li {
+  margin-bottom: 8px;
+}
+
+.info-postulacion-col .nota-validacion {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-top: 0;
+  color: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 /*# sourceMappingURL=style.css.map */
