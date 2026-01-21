@@ -161,6 +161,7 @@ p {
   line-height: 3;
   font-weight: 500;
   color: var(--ed-blue);
+  transition: color 0.3s ease;
 }
 @media screen and (max-width: 1199px) {
   .ed-header-nav a {
@@ -168,6 +169,12 @@ p {
     padding-bottom: 6px;
     padding: 11px 20px;
     line-height: 1.8;
+  }
+}
+@media screen and (max-width: 640px) {
+  .ed-header-nav a {
+    padding: 10px 15px;
+    font-size: 15px;
   }
 }
 .ed-header-nav a:hover {
@@ -384,29 +391,85 @@ p {
 
 /* Grupos de checkboxes */
 .checkbox-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+  padding: 5px 0;
 }
 
 .checkbox-group label {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   cursor: pointer;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.checkbox-group label:hover {
+  background-color: rgba(0, 222, 129, 0.05);
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #00de81;
+  flex-shrink: 0;
+}
+
+.checkbox-group label span {
+  font-size: 14px;
+  color: #4F536C;
+  font-weight: 500;
+  line-height: 1.4;
 }
 
 /* Checkbox individual (consentimientos) */
 .checkbox-single label {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  line-height: 1.4;
+  gap: 12px;
+  line-height: 1.5;
+  cursor: pointer;
+  padding: 10px 8px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.checkbox-single label:hover {
+  background-color: rgba(0, 222, 129, 0.03);
 }
 
 .checkbox-single input[type="checkbox"] {
   margin-top: 4px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #00de81;
+  flex-shrink: 0;
+}
+
+.checkbox-single label span {
+  font-size: 14px;
+  color: #4F536C;
+}
+
+.checkbox-single label a {
+  color: #00de81;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.checkbox-single label a:hover {
+  text-decoration: underline;
+  color: #241442;
 }
 
 /* Texto bajo botón enviar */
@@ -527,6 +590,396 @@ input[type="file"]:hover {
   margin-top: 0;
   color: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    font-size: 14px;
+  }
+
+  .ed-btn {
+    padding: 0 12px;
+    height: 45px;
+    font-size: 12px;
+  }
+
+  .ed-section-title {
+    font-size: 20px;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="url"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+
+  .checkbox-group {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .checkbox-group label {
+    padding: 10px 8px;
+  }
+
+  .checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }
+
+  .checkbox-group label span {
+    font-size: 13px;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .ed-btn {
+    height: 48px;
+    padding: 0 16px;
+    font-size: 13px;
+  }
+
+  .form-section-title {
+    font-size: 18px;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="url"],
+  select,
+  textarea {
+    padding: 12px 15px !important;
+    font-size: 16px !important;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  h2 {
+    font-size: 24px !important;
+  }
+
+  .gap-\[30px\] {
+    gap: 20px !important;
+  }
+
+  .gap-\[60px\] {
+    gap: 20px !important;
+  }
+
+  .checkbox-group {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .checkbox-group label {
+    padding: 10px 10px;
+  }
+
+  .checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }
+
+  .checkbox-group label span {
+    font-size: 14px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .ed-btn {
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .form-section-title {
+    font-size: 20px;
+    margin: 20px 0 12px 0;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="url"],
+  select,
+  textarea {
+    padding: 14px 16px !important;
+    font-size: 16px !important;
+    border-radius: 6px;
+  }
+
+  textarea {
+    min-height: 100px;
+  }
+
+  .checkbox-group {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .checkbox-group label {
+    padding: 10px 10px;
+  }
+
+  .checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }
+
+  .checkbox-group label span {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .ed-section-title {
+    font-size: 38px;
+  }
+
+  .ed-btn {
+    height: 50px;
+    font-size: 14px;
+    padding: 0 18px;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="url"],
+  select,
+  textarea {
+    padding: 14px 16px !important;
+    font-size: 15px !important;
+  }
+
+  .info-postulacion-col {
+    margin-bottom: 20px;
+  }
+
+  .form-section-title {
+    font-size: 22px;
+  }
+
+  .checkbox-group {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .checkbox-group label {
+    padding: 10px 10px;
+  }
+
+  .checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }
+
+  .checkbox-group label span {
+    font-size: 14px;
+  }
+}
+
+
+@media screen and (min-width: 1025px) {
+  .ed-btn {
+    transition: all 0.3s ease;
+  }
+
+  .ed-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 222, 129, 0.3);
+  }
+
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  input[type="email"]:focus,
+  input[type="url"]:focus,
+  select:focus,
+  textarea:focus {
+    border-color: var(--ed-purple);
+    box-shadow: 0 0 0 3px rgba(0, 222, 129, 0.1);
+  }
+
+  .checkbox-group {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .checkbox-group label {
+    padding: 10px 10px;
+  }
+
+  .checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }
+
+  .checkbox-group label span {
+    font-size: 15px;
+  }
+
+  .checkbox-group label:hover {
+    background-color: rgba(0, 222, 129, 0.08);
+    transform: translateX(2px);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  button,
+  a,
+  input[type="checkbox"],
+  input[type="radio"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .ed-btn {
+    height: 50px;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="url"],
+  select,
+  textarea {
+    font-size: 16px !important;
+    padding: 14px 16px !important;
+  }
+
+  .checkbox-group input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+  }
+
+  .checkbox-single input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+  }
+
+  .checkbox-group label,
+  .checkbox-single label {
+    padding: 12px 10px;
+  }
+}
+
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .ed-btn {
+    padding: 0 14px;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="url"],
+  select,
+  textarea {
+    height: 38px !important;
+    padding: 8px 12px !important;
+    font-size: 14px !important;
+  }
+
+  textarea {
+    height: auto !important;
+    min-height: 60px !important;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+}
+
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  max-width: 100%;
+}
+
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+@media screen and (max-width: 480px) {
+  .checkbox-group {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .checkbox-group label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 8px;
+  }
+
+  .checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+}
+
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

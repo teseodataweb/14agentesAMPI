@@ -138,13 +138,13 @@
         </section>
         <!-- BANNER SECTION END -->
         <!-- CONTACT SECTION START -->
-        <section class="py-[120px] xl:py-[80px] md:py-[60px]">
+        <section class="py-[120px] xl:py-[80px] md:py-[60px] sm:py-[50px] xxs:py-[40px]">
             <div class="container mx-auto max-w-[1200px] px-[12px] xl:max-w-full">
                 <!-- Sección informativa oscura arriba -->
-                <div id="form" class="mb-[60px] md:mb-[40px]">
+                <div id="form" class="mb-[60px] md:mb-[40px] sm:mb-[30px]">
                     <div class="rounded-[16px] overflow-hidden">
-                        <div class="bg-edpurple p-[40px] sm:p-[30px] xxs:p-[20px] text-[16px]">
-                            <div class="grid grid-cols-3 lg:grid-cols-3 md:grid-cols-1 gap-[30px] lg:gap-[25px] md:gap-[20px]">
+                        <div class="bg-edpurple p-[40px] sm:p-[30px] xxs:p-[20px] text-[16px] sm:text-[15px] xxs:text-[14px]">
+                            <div class="grid grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xxs:grid-cols-1 gap-[30px] lg:gap-[25px] md:gap-[20px] sm:gap-[15px]">
                               
                                 <div class="info-postulacion-col">
                                     <h3>¿Que es "14 Agentes AMPI"?</h3>
@@ -192,35 +192,35 @@
                           
                             <!-- 1. Nombre completo -->
                             <div class="form-group">
-                              <label for="nombre" class="font-lato font-semibold text-edblue block mb-[12px]">Nombre completo <span class="text-red-500">*</span></label>
+                              <label for="nombre" class="font-lato font-semibold text-edblue block mb-[12px] sm:mb-[10px] sm:text-[14px]">Nombre completo <span class="text-red-500">*</span></label>
                               <input type="text" id="nombre" name="nombre" required
                                      placeholder="Ej. Juan Perez Garcia"
-                                     class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none">
+                                     class="border border-[#ECECEC] h-[55px] px-[20px] sm:px--[15px] sm:h-[50px] xxs:h-[48px] rounded-[4px] w-full focus:outline-none text-[14px] sm:text-[15px]">
                             </div>
                           
                             <!-- 2. Telefono WhatsApp -->
                             <div class="form-group">
-                              <label for="telefono" class="font-lato font-semibold text-edblue block mb-[12px]">Telefono (WhatsApp) <span class="text-red-500">*</span></label>
+                              <label for="telefono" class="font-lato font-semibold text-edblue block mb-[12px] sm:mb-[10px] sm:text-[14px]">Telefono (WhatsApp) <span class="text-red-500">*</span></label>
                               <input type="tel" id="telefono" name="telefono" required
                                      placeholder="10 digitos: 3221234567"
                                      pattern="[0-9]{10}"
                                      title="Ingresa 10 digitos sin espacios ni guiones"
-                                     class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none">
+                                     class="border border-[#ECECEC] h-[55px] px-[20px] sm:px-[15px] sm:h-[50px] xxs:h-[48px] rounded-[4px] w-full focus:outline-none text-[14px] sm:text-[15px]">
                             </div>
                           
                             <!-- 3. Agencia inmobiliaria -->
                             <div class="form-group">
-                              <label for="agencia" class="font-lato font-semibold text-edblue block mb-[12px]">Agencia inmobiliaria <span class="text-red-500">*</span></label>
+                              <label for="agencia" class="font-lato font-semibold text-edblue block mb-[12px] sm:mb-[10px] sm:text-[14px]">Agencia inmobiliaria <span class="text-red-500">*</span></label>
                               <input type="text" id="agencia" name="agencia" required
                                      placeholder="Ej. Century 21, RE/MAX, Independiente..."
-                                     class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none">
+                                     class="border border-[#ECECEC] h-[55px] px-[20px] sm:px-[15px] sm:h-[50px] xxs:h-[48px] rounded-[4px] w-full focus:outline-none text-[14px] sm:text-[15px]">
                             </div>
                           
                             <!-- 4. Ciudad/Zona (dropdown) -->
                             <div class="form-group">
-                              <label for="ciudad" class="font-lato font-semibold text-edblue block mb-[12px]">Ciudad / Zona general <span class="text-red-500">*</span></label>
+                              <label for="ciudad" class="font-lato font-semibold text-edblue block mb-[12px] sm:mb-[10px] sm:text-[14px]">Ciudad / Zona general <span class="text-red-500">*</span></label>
                               <select id="ciudad" name="ciudad" required
-                                      class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none">
+                                      class="border border-[#ECECEC] h-[55px] px-[20px] sm:px-[15px] sm:h-[50px] xxs:h-[48px] rounded-[4px] w-full focus:outline-none text-[14px] sm:text-[15px] appearance-none bg-white cursor-pointer" style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22currentColor%22%3e%3cpath d=%22M6 9l6 6 6-6%22/%3e%3c/svg%3e'); background-repeat: no-repeat; background-position: right 10px center; background-size: 20px; padding-right: 40px;">
                                 <option value="">Selecciona una opcion</option>
                                 <option value="Puerto Vallarta">Puerto Vallarta</option>
                                 <option value="Bahia de Banderas">Bahia de Banderas</option>
@@ -242,34 +242,34 @@
                           
                             <!-- 5. Instagram -->
                             <div class="form-group">
-                              <label for="instagram" class="font-lato font-semibold text-edblue block mb-[12px]">Instagram <span class="text-red-500">*</span></label>
+                              <label for="instagram" class="font-lato font-semibold text-edblue block mb-[12px] sm:mb-[10px] sm:text-[14px]">Instagram <span class="text-red-500">*</span></label>
                               <input type="text" id="instagram" name="instagram" required
                                      placeholder="@tu_usuario o URL completa"
-                                     class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none">
+                                     class="border border-[#ECECEC] h-[55px] px-[20px] sm:px-[15px] sm:h-[50px] xxs:h-[48px] rounded-[4px] w-full focus:outline-none text-[14px] sm:text-[15px]">
                             </div>
                           
                             <!-- 6. Facebook -->
                             <div class="form-group">
-                              <label for="facebook" class="font-lato font-semibold text-edblue block mb-[12px]">Facebook <span class="text-red-500">*</span></label>
+                              <label for="facebook" class="font-lato font-semibold text-edblue block mb-[12px] sm:mb-[10px] sm:text-[14px]">Facebook <span class="text-red-500">*</span></label>
                               <input type="text" id="facebook" name="facebook" required
                                      placeholder="URL de tu pagina o perfil"
-                                     class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none">
+                                     class="border border-[#ECECEC] h-[55px] px-[20px] sm:px-[15px] sm:h-[50px] xxs:h-[48px] rounded-[4px] w-full focus:outline-none text-[14px] sm:text-[15px]">
                             </div>
                           
                             <!-- 7. TikTok -->
                             <div class="form-group">
-                              <label for="tiktok" class="font-lato font-semibold text-edblue block mb-[12px]">TikTok <span class="text-red-500">*</span></label>
+                              <label for="tiktok" class="font-lato font-semibold text-edblue block mb-[12px] sm:mb-[10px] sm:text-[14px]">TikTok <span class="text-red-500">*</span></label>
                               <input type="text" id="tiktok" name="tiktok" required
                                      placeholder="@tu_usuario o URL"
-                                     class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none">
+                                     class="border border-[#ECECEC] h-[55px] px-[20px] sm:px-[15px] sm:h-[50px] xxs:h-[48px] rounded-[4px] w-full focus:outline-none text-[14px] sm:text-[15px]">
                             </div>
                           
                             <!-- 8. Sitio web (OPCIONAL) -->
                             <div class="form-group">
-                              <label for="sitioweb" class="font-lato font-semibold text-edblue block mb-[12px]">Sitio web (opcional)</label>
+                              <label for="sitioweb" class="font-lato font-semibold text-edblue block mb-[12px] sm:mb-[10px] sm:text-[14px]">Sitio web (opcional)</label>
                               <input type="url" id="sitioweb" name="sitioweb"
                                      placeholder="https://www.tusitio.com"
-                                     class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none">
+                                     class="border border-[#ECECEC] h-[55px] px-[20px] sm:px-[15px] sm:h-[50px] xxs:h-[48px] rounded-[4px] w-full focus:outline-none text-[14px] sm:text-[15px]">
                             </div>
                           
                             <!-- ========== SECCION 3: ESPECIALIDAD ========== -->
@@ -279,42 +279,42 @@
                           
                             <!-- 9. Tipo de propiedad (multi-select con checkboxes) -->
                             <div class="form-group col-span-2 xxs:col-span-1">
-                              <label class="font-lato font-semibold text-edblue block mb-[12px]">Tipo de propiedad <span class="text-red-500">*</span> (puedes elegir varios)</label>
+                              <label class="font-lato font-semibold text-edblue block mb-[12px] sm:mb-[10px] sm:text-[14px]">Tipo de propiedad <span class="text-red-500">*</span> (puedes elegir varios)</label>
                               <div class="checkbox-group">
-                                <label class="flex items-center cursor-pointer"><input type="checkbox" name="tipo_propiedad" value="Casas" class="mr-[8px]"><span class="text-edgray">Casas</span></label>
-                                <label class="flex items-center cursor-pointer"><input type="checkbox" name="tipo_propiedad" value="Departamentos" class="mr-[8px]"><span class="text-edgray">Departamentos</span></label>
-                                <label class="flex items-center cursor-pointer"><input type="checkbox" name="tipo_propiedad" value="Terrenos" class="mr-[8px]"><span class="text-edgray">Terrenos</span></label>
-                                <label class="flex items-center cursor-pointer"><input type="checkbox" name="tipo_propiedad" value="Comercial" class="mr-[8px]"><span class="text-edgray">Comercial</span></label>
-                                <label class="flex items-center cursor-pointer"><input type="checkbox" name="tipo_propiedad" value="Industrial" class="mr-[8px]"><span class="text-edgray">Industrial</span></label>
+                                <label class="flex items-center cursor-pointer text-[14px] sm:text-[13px]"><input type="checkbox" name="tipo_propiedad" value="Casas" class="mr-[8px] w-[20px] h-[20px] flex-shrink-0"><span class="text-edgray">Casas</span></label>
+                                <label class="flex items-center cursor-pointer text-[14px] sm:text-[13px]"><input type="checkbox" name="tipo_propiedad" value="Departamentos" class="mr-[8px] w-[20px] h-[20px] flex-shrink-0"><span class="text-edgray">Departamentos</span></label>
+                                <label class="flex items-center cursor-pointer text-[14px] sm:text-[13px]"><input type="checkbox" name="tipo_propiedad" value="Terrenos" class="mr-[8px] w-[20px] h-[20px] flex-shrink-0"><span class="text-edgray">Terrenos</span></label>
+                                <label class="flex items-center cursor-pointer text-[14px] sm:text-[13px]"><input type="checkbox" name="tipo_propiedad" value="Comercial" class="mr-[8px] w-[20px] h-[20px] flex-shrink-0"><span class="text-edgray">Comercial</span></label>
+                                <label class="flex items-center cursor-pointer text-[14px] sm:text-[13px]"><input type="checkbox" name="tipo_propiedad" value="Industrial" class="mr-[8px] w-[20px] h-[20px] flex-shrink-0"><span class="text-edgray">Industrial</span></label>
                               </div>
                             </div>
                           
                             <!-- 10. Operacion (multi-select con checkboxes) -->
                             <div class="form-group col-span-2 xxs:col-span-1">
-                              <label class="font-lato font-semibold text-edblue block mb-[12px]">Operacion <span class="text-red-500">*</span> (puedes elegir ambas)</label>
+                              <label class="font-lato font-semibold text-edblue block mb-[12px] sm:mb-[10px] sm:text-[14px]">Operacion <span class="text-red-500">*</span> (puedes elegir ambas)</label>
                               <div class="checkbox-group">
-                                <label class="flex items-center cursor-pointer"><input type="checkbox" name="operacion" value="Venta" class="mr-[8px]"><span class="text-edgray">Venta</span></label>
-                                <label class="flex items-center cursor-pointer"><input type="checkbox" name="operacion" value="Renta" class="mr-[8px]"><span class="text-edgray">Renta</span></label>
+                                <label class="flex items-center cursor-pointer text-[14px] sm:text-[13px]"><input type="checkbox" name="operacion" value="Venta" class="mr-[8px] w-[20px] h-[20px] flex-shrink-0"><span class="text-edgray">Venta</span></label>
+                                <label class="flex items-center cursor-pointer text-[14px] sm:text-[13px]"><input type="checkbox" name="operacion" value="Renta" class="mr-[8px] w-[20px] h-[20px] flex-shrink-0"><span class="text-edgray">Renta</span></label>
                               </div>
                             </div>
                           
                             <!-- 11. Colonias/Zonas especificas (tags/texto) -->
                             <div class="form-group col-span-2 xxs:col-span-1">
-                              <label for="colonias" class="font-lato font-semibold text-edblue block mb-[12px]">Colonias / Zonas especificas <span class="text-red-500">*</span></label>
+                              <label for="colonias" class="font-lato font-semibold text-edblue block mb-[12px] sm:mb-[10px] sm:text-[14px]">Colonias / Zonas especificas <span class="text-red-500">*</span></label>
                               <input type="text" id="colonias" name="colonias" required
                                      placeholder="Ej. Marina Vallarta, Fluvial, Zona Romantica..."
-                                     class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none">
-                              <small class="text-edgray text-[14px] mt-[5px] block">Separa las zonas con comas</small>
+                                     class="border border-[#ECECEC] h-[55px] px-[20px] sm:px-[15px] sm:h-[50px] xxs:h-[48px] rounded-[4px] w-full focus:outline-none text-[14px] sm:text-[15px]">
+                              <small class="text-edgray text-[13px] sm:text-[12px] mt-[5px] block">Separa las zonas con comas</small>
                             </div>
                           
                             <!-- 12. Descripcion breve (OPCIONAL) -->
                             <div class="form-group col-span-2 xxs:col-span-1">
-                              <label for="descripcion" class="font-lato font-semibold text-edblue block mb-[12px]">Descripcion breve de tu especialidad (opcional)</label>
+                              <label for="descripcion" class="font-lato font-semibold text-edblue block mb-[12px] sm:mb-[10px] sm:text-[14px]">Descripcion breve de tu especialidad (opcional)</label>
                               <textarea id="descripcion" name="descripcion"
                                         maxlength="300" rows="3"
                                         placeholder="Me especializo en ___ (tipo), en ___ (zona), enfocado en ___ (rango/estilo)."
-                                        class="border border-[#ECECEC] px-[20px] xs:px-[15px] py-[15px] rounded-[4px] w-full focus:outline-none resize-none"></textarea>
-                              <small class="text-edgray text-[14px] mt-[5px] block">Maximo 300 caracteres</small>
+                                        class="border border-[#ECECEC] px-[20px] sm:px-[15px] py-[15px] rounded-[4px] w-full focus:outline-none resize-none text-[14px] sm:text-[15px] min-h-[100px] sm:min-h-[90px]"></textarea>
+                              <small class="text-edgray text-[13px] sm:text-[12px] mt-[5px] block">Maximo 300 caracteres</small>
                             </div>
                           
                             <!-- ========== SECCION 4: FOTO ========== -->
@@ -324,12 +324,13 @@
                           
                             <!-- 13. Subir foto -->
                             <div class="form-group col-span-2 xxs:col-span-1">
-                              <label for="foto" class="font-lato font-semibold text-edblue block mb-[12px]">Subir foto <span class="text-red-500">*</span></label>
+                              <label for="foto" class="font-lato font-semibold text-edblue block mb-[12px] sm:mb-[10px] sm:text-[14px]">Subir foto <span class="text-red-500">*</span></label>
                               <input type="file" id="foto" name="foto" required
                                      accept="image/jpeg,image/png"
-                                     class="file-input">
-                              <small class="text-edgray text-[14px] mt-[5px] block">
-                                Formatos: JPG o PNG | Peso max: 10 MB<br>
+                                     class="file-input p-[10px] sm:p-[8px] text-[14px] sm:text-[13px]">
+                              <small class="text-edgray text-[13px] sm:text-[12px] mt-[5px] block">
+                                Formatos: JPG o PNG | Peso max: 10 MB<br class="sm:hidden">
+                                <span class="sm:inline">Formatos: JPG/PNG | Max 10 MB </span><br>
                                 Recomendacion: cuadrada 1:1, minimo 1080x1080 px, fondo limpio
                               </small>
                             </div>
@@ -341,16 +342,16 @@
                           
                             <!-- 14. Autorizacion uso editorial -->
                             <div class="form-group checkbox-single col-span-2 xxs:col-span-1">
-                              <label class="flex items-start cursor-pointer">
-                                <input type="checkbox" name="autorizacion_editorial" class="mr-[8px] mt-[4px]" required>
+                              <label class="flex items-start cursor-pointer text-[14px] sm:text-[13px]">
+                                <input type="checkbox" name="autorizacion_editorial" class="mr-[8px] mt-[4px] w-[20px] h-[20px] flex-shrink-0" required>
                                 <span class="text-edgray">Autorizo el uso de mi foto y datos para fines editoriales y de difusion de AMPI Riviera Nayarit. <span class="text-red-500">*</span></span>
                               </label>
                             </div>
                           
                             <!-- 15. Aviso de privacidad -->
                             <div class="form-group checkbox-single col-span-2 xxs:col-span-1">
-                              <label class="flex items-start cursor-pointer">
-                                <input type="checkbox" name="aviso_privacidad" class="mr-[8px] mt-[4px]" required>
+                              <label class="flex items-start cursor-pointer text-[14px] sm:text-[13px]">
+                                <input type="checkbox" name="aviso_privacidad" class="mr-[8px] mt-[4px] w-[20px] h-[20px] flex-shrink-0" required>
                                 <span class="text-edgray">Acepto el <a href="#" target="_blank" class="text-edpurple hover:underline">aviso de privacidad</a>. <span class="text-red-500">*</span></span>
                               </label>
                             </div>
@@ -360,10 +361,10 @@
                           
                             <!-- BOTON ENVIAR -->
                             <div class="col-span-2 xxs:col-span-1">
-                                <button type="submit" class="bg-edpurple h-[55px] px-[24px] rounded-[10px] text-[16px] font-medium text-white hover:bg-edblue w-full">
-                                  Enviar mi postulacion<span class="icon pl-[10px]"><i class="fa-solid fa-arrow-right-long"></i></span>
+                                <button type="submit" class="bg-edpurple h-[55px] sm:h-[50px] xxs:h-[48px] px-[24px] sm:px-[16px] rounded-[10px] text-[16px] sm:text-[14px] font-medium text-white hover:bg-edblue w-full transition-all duration-300">
+                                  Enviar mi postulacion<span class="icon pl-[10px] sm:pl-[8px]"><i class="fa-solid fa-arrow-right-long"></i></span>
                                 </button>
-                                <p class="texto-envio">
+                                <p class="texto-envio text-[12px] sm:text-[11px]">
                                   Al enviar confirmas que tu informacion es correcta y autorizas su uso editorial.
                                 </p>
                             </div>
@@ -677,7 +678,7 @@
     <script src="assets/vendor/slim-select/slimselect.min.js"></script>
 
     <script src="assets/js/main.js"></script>
-    <!-- <script src="assets/js/header-2.js"></script> -->
+    
     <script src="assets/js/accordion.js"></script>
 
     <script>
@@ -808,7 +809,7 @@
           })
           .then((response) => response.text())
           .then((text) => {
-            // Cierra el loading
+            
             Swal.close();
       
             Swal.fire({
