@@ -57,30 +57,31 @@ Form14AgentesAMPI/
 **Contenido NUEVO:**
 
 ```html
-<!-- TITULO PRINCIPAL (H1) -->
+<!-- TITULO PRINCIPAL (H1) -->✅
 <h1>Postulate para aparecer en "14 Agentes AMPI" - Proxima edicion</h1>
 
-<!-- SUBTITULO -->
+<!-- SUBTITULO -->✅
 <p class="ed-section-sub-title">REVISTA AMPI RIVIERA NAYARIT</p>
 
-<!-- TEXTO DESCRIPTIVO -->
+<!-- TEXTO DESCRIPTIVO -->✅
 <p>Comparte tu perfil profesional para que el publico te conozca. Publicaremos
 14 perfiles con: foto, nombre, telefono, agencia, redes sociales y especialidad.</p>
 
-<!-- AVISO DE CUPO (destacado) -->
+<!-- AVISO DE CUPO (destacado) -->✅
 <div class="cupo-limitado">
   <strong>Cupo limitado:</strong> solo 14 perfiles seran publicados.
   Consideraremos los primeros 14 registros completos.
 </div>
 
-<!-- BOTONES CTA -->
+<!-- BOTONES CTA -->✅
 <a href="#form" class="ed-btn">Quiero postularme</a>
 <a href="#about" class="ed-btn ed-btn--white">Mas informacion</a>
 ```
-
+✅
 **Imagenes del banner:**
 - Reemplazar las fotos actuales por imagenes relacionadas con agentes/revista
-- Ubicacion: `assets/img/banner-2-img-1.jpg` y `banner-2-img-2.jpg`
+- Ubicacion: `assets/img/banner-2-img-1.jpg` y `banner-2-img-2.jpg` 
+✅
 
 ---
 
