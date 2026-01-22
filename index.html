@@ -183,7 +183,7 @@
                     <h2 class="text-[40px] md:text-[35px] sm:text-[30px] xxs:text-[28px] font-semibold text-edblue mb-[7px]">Completa tu postulación</h2>
                     <p class="text-edgray font-normal text-[16px] mb-[38px]">Llena todos los campos para que tu perfil pueda ser considerado para la próxima edición de la revista.</p>
                         <!-- Inicio de FORMULARIO DE POSTULACION -->
-                        <form id="form-postulacion" action="https://script.google.com/macros/s/AKfycbw4VVrmibT8QsHk1QzQyS1v6W92sqYz1l3eEQJADZxUH4Gj5nq7Xb5wekGiaHm8pMHc/exec" method="POST" enctype="multipart/form-data" class="grid grid-cols-2 xxs:grid-cols-1 gap-[30px] xs:gap-[20px] text-[16px]">
+                        <form id="form-postulacion" action="https://script.google.com/macros/s/AKfycbwDdrwj3Q-14ZA36T5xT6xGHbVmwkuG8Rtaw0jr9TwwF13fYqDIQKmOy-fw0uUJYcxW/exec" method="POST" enctype="multipart/form-data" class="grid grid-cols-2 xxs:grid-cols-1 gap-[30px] xs:gap-[20px] text-[16px]">
 
                             <!-- ========== SECCION 1: DATOS BASICOS ========== -->
                             <div class="col-span-2 xxs:col-span-1">
@@ -207,12 +207,20 @@
                                      title="Ingresa 10 digitos sin espacios ni guiones"
                                      class="border border-[#ECECEC] h-[55px] px-[20px] sm:px-[15px] sm:h-[50px] xxs:h-[48px] rounded-[4px] w-full focus:outline-none text-[14px] sm:text-[15px]">
                             </div>
-                          
-                            <!-- 3. Agencia inmobiliaria -->
+
+                            <!-- 3. Correo electronico -->
+                            <div class="form-group">
+                              <label for="email" class="font-lato font-semibold text-edblue block mb-[12px] sm:mb-[10px] sm:text-[14px]">Correo electrónico <span class="text-red-500">*</span></label>
+                              <input type="email" id="email" name="email" required
+                                     placeholder="tucorreo@ejemplo.com"
+                                     class="border border-[#ECECEC] h-[55px] px-[20px] sm:px-[15px] sm:h-[50px] xxs:h-[48px] rounded-[4px] w-full focus:outline-none text-[14px] sm:text-[15px]">
+                            </div>
+
+                            <!-- 4. Agencia inmobiliaria -->
                             <div class="form-group">
                               <label for="agencia" class="font-lato font-semibold text-edblue block mb-[12px] sm:mb-[10px] sm:text-[14px]">Agencia inmobiliaria <span class="text-red-500">*</span></label>
                               <input type="text" id="agencia" name="agencia" required
-                                     placeholder="Ej. Century 21, RE/MAX, Independiente..."
+                                     placeholder="Ej. Nombre de tu agencia o Independiente"
                                      class="border border-[#ECECEC] h-[55px] px-[20px] sm:px-[15px] sm:h-[50px] xxs:h-[48px] rounded-[4px] w-full focus:outline-none text-[14px] sm:text-[15px]">
                             </div>
                           
@@ -753,16 +761,77 @@
             }
         });
         
-        document.getElementById("form-postulacion").addEventListener("submit", function (event) {
+        // Funcion para convertir archivo a base64
+        function fileToBase64(file) {
+          return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = () => resolve(reader.result);
+            reader.onerror = error => reject(error);
+          });
+        }
+
+        // Variable global para saber si el cupo está lleno
+        let cupoLleno = false;
+        const API_URL = 'https://script.google.com/macros/s/AKfycbwDdrwj3Q-14ZA36T5xT6xGHbVmwkuG8Rtaw0jr9TwwF13fYqDIQKmOy-fw0uUJYcxW/exec';
+
+        // Verificar cupo al cargar la página
+        async function verificarCupo() {
+          try {
+            const response = await fetch(API_URL);
+            const result = await response.json();
+
+            if (result.success && result.data.cupoLleno) {
+              cupoLleno = true;
+              mostrarAvisoCupoLleno(result.data.registrosEnEspera);
+            }
+          } catch (error) {
+            console.error('Error verificando cupo:', error);
+          }
+        }
+
+        function mostrarAvisoCupoLleno(enEspera) {
+          // Cambiar título del formulario
+          const formTitle = document.querySelector('#form h2, #contact h2, [id*="form"] h2');
+          if (formTitle) {
+            formTitle.innerHTML = '¡Cupo completo! <span style="font-size:0.6em;display:block;font-weight:normal;margin-top:5px;">Regístrate en lista de espera</span>';
+          }
+
+          // Agregar aviso antes del formulario
+          const form = document.getElementById('form-postulacion');
+          const avisoExistente = document.getElementById('aviso-cupo-lleno');
+
+          if (!avisoExistente && form) {
+            const aviso = document.createElement('div');
+            aviso.id = 'aviso-cupo-lleno';
+            aviso.style.cssText = 'background: linear-gradient(135deg, #fff3cd 0%, #ffe69c 100%); border-left: 4px solid #ffc107; padding: 15px 20px; margin-bottom: 25px; border-radius: 0 8px 8px 0;';
+            aviso.innerHTML = `
+              <p style="margin:0; color: #856404; font-weight: 600;">Los 14 lugares para esta edición ya fueron ocupados.</p>
+              <p style="margin: 8px 0 0 0; color: #856404; font-size: 14px;">Puedes registrarte en la lista de espera. Te contactaremos si se libera un lugar o para la siguiente edición.</p>
+            `;
+            form.parentNode.insertBefore(aviso, form);
+          }
+
+          // Cambiar texto del botón
+          const submitBtn = form.querySelector('button[type="submit"]');
+          if (submitBtn) {
+            submitBtn.innerHTML = 'Registrarme en lista de espera <span class="icon pl-[10px] sm:pl-[8px]"><i class="fa-solid fa-clock"></i></span>';
+          }
+        }
+
+        // Ejecutar al cargar
+        document.addEventListener('DOMContentLoaded', verificarCupo);
+
+        document.getElementById("form-postulacion").addEventListener("submit", async function (event) {
           event.preventDefault();
-      
+
           const form = event.target;
           const formData = new FormData(form);
-      
-         
+
+          // Validar checkboxes
           const tipoPropiedad = formData.getAll("tipo_propiedad");
           const operacion = formData.getAll("operacion");
-          
+
           if (tipoPropiedad.length === 0) {
             Swal.fire({
               icon: 'warning',
@@ -772,7 +841,7 @@
             });
             return;
           }
-          
+
           if (operacion.length === 0) {
             Swal.fire({
               icon: 'warning',
@@ -782,16 +851,18 @@
             });
             return;
           }
-      
+
+          // Convertir arrays a strings
+          formData.set('tipo_propiedad', tipoPropiedad.join(', '));
+          formData.set('operacion', operacion.join(', '));
+
           const name = formData.get("nombre") || "";
           const submitBtn = form.querySelector('button[type="submit"]');
           const originalBtnHtml = submitBtn.innerHTML;
-      
-          
+
           submitBtn.disabled = true;
           submitBtn.innerHTML = "Enviando…";
-      
-         
+
           Swal.fire({
             title: "Enviando tu postulación…",
             text: "Por favor espera un momento.",
@@ -802,29 +873,66 @@
               Swal.showLoading();
             }
           });
-      
-          fetch(form.action, {
-            method: "POST",
-            body: formData
-          })
-          .then((response) => response.text())
-          .then((text) => {
-            
-            Swal.close();
-      
-            Swal.fire({
-              icon: 'success',
-              title: '¡Listo!',
-              html: `
-                <p>Recibimos tu postulación${name ? ", <b>" + name + "</b>" : ""}.</p>
-                <p>Te contactaremos si tu perfil queda seleccionado.</p>
-              `,
-              confirmButtonColor: '#00de81'
+
+          try {
+            // Convertir foto a base64
+            const fotoInput = document.getElementById('foto');
+            if (fotoInput.files[0]) {
+              const base64 = await fileToBase64(fotoInput.files[0]);
+              formData.append('foto_base64', base64);
+              formData.append('foto_nombre', fotoInput.files[0].name);
+            }
+
+            // Eliminar el archivo original del formData (no se puede enviar directamente)
+            formData.delete('foto');
+
+            const response = await fetch(form.action, {
+              method: "POST",
+              body: formData
             });
-      
-            form.reset();
-          })
-          .catch((error) => {
+
+            const result = await response.json();
+            Swal.close();
+
+            if (result.success && result.message === 'CONFIRMADO') {
+              Swal.fire({
+                icon: 'success',
+                title: '¡Tu lugar está confirmado!',
+                html: `
+                  <p>Gracias <b>${result.data.nombre}</b>.</p>
+                  <p>Tu perfil ha sido registrado exitosamente para aparecer en la sección <b>"14 Agentes"</b> de la próxima edición de nuestra revista.</p>
+                  <p style="margin-top:15px;">Nos pondremos en contacto contigo para coordinar los detalles de publicación.</p>
+                `,
+                confirmButtonColor: '#00de81'
+              });
+              form.reset();
+
+            } else if (result.success && result.message === 'LISTA_ESPERA') {
+              Swal.fire({
+                icon: 'info',
+                title: 'Registrado en lista de espera',
+                html: `
+                  <p>Gracias <b>${result.data.nombre}</b>.</p>
+                  <p>El cupo de 14 agentes ya está completo, pero tu registro quedó en <b>lista de espera</b> (posición #${result.data.posicionEspera}).</p>
+                  <p style="margin-top:10px;">Te contactaremos si se libera algún lugar o para la siguiente edición de la revista.</p>
+                `,
+                confirmButtonColor: '#241442'
+              });
+              form.reset();
+
+            } else if (result.message === 'DUPLICADO') {
+              Swal.fire({
+                icon: 'warning',
+                title: 'Registro existente',
+                text: result.data.mensaje || 'Ya existe un registro con este número de teléfono.',
+                confirmButtonColor: '#241442'
+              });
+
+            } else {
+              throw new Error(result.message || 'Error desconocido');
+            }
+
+          } catch (error) {
             Swal.close();
             Swal.fire({
               title: "Error",
@@ -833,11 +941,11 @@
               confirmButtonText: "Aceptar",
             });
             console.error("Error al enviar el formulario:", error);
-          })
-          .finally(() => {
+
+          } finally {
             submitBtn.disabled = false;
             submitBtn.innerHTML = originalBtnHtml;
-          });
+          }
         });
 
         
