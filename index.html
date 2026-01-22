@@ -139,7 +139,7 @@
         <!-- BANNER SECTION END -->
         <!-- CONTACT SECTION START -->
         <section class="py-[120px] xl:py-[80px] md:py-[60px] sm:py-[50px] xxs:py-[40px]">
-            <div class="container mx-auto max-w-[1200px] px-[12px] xl:max-w-full">
+            <div class="container mx-auto max-w-[1200px] px-[80px] xl:px-[60px] lg:px-[40px] md:px-[30px] sm:px-[20px] xxs:px-[15px]">
                 <!-- Sección informativa oscura arriba -->
                 <div id="form" class="mb-[60px] md:mb-[40px] sm:mb-[30px]">
                     <div class="rounded-[16px] overflow-hidden">
@@ -286,23 +286,23 @@
                             </div>
                           
                             <!-- 9. Tipo de propiedad (multi-select con checkboxes) -->
-                            <div class="form-group col-span-2 xxs:col-span-1">
+                            <div class="form-group">
                               <label class="font-lato font-semibold text-edblue block mb-[12px] sm:mb-[10px] sm:text-[14px]">Tipo de propiedad <span class="text-red-500">*</span> (puedes elegir varios)</label>
-                              <div class="checkbox-group">
-                                <label class="flex items-center cursor-pointer text-[14px] sm:text-[13px]"><input type="checkbox" name="tipo_propiedad" value="Casas" class="mr-[8px] w-[20px] h-[20px] flex-shrink-0"><span class="text-edgray">Casas</span></label>
-                                <label class="flex items-center cursor-pointer text-[14px] sm:text-[13px]"><input type="checkbox" name="tipo_propiedad" value="Departamentos" class="mr-[8px] w-[20px] h-[20px] flex-shrink-0"><span class="text-edgray">Departamentos</span></label>
-                                <label class="flex items-center cursor-pointer text-[14px] sm:text-[13px]"><input type="checkbox" name="tipo_propiedad" value="Terrenos" class="mr-[8px] w-[20px] h-[20px] flex-shrink-0"><span class="text-edgray">Terrenos</span></label>
-                                <label class="flex items-center cursor-pointer text-[14px] sm:text-[13px]"><input type="checkbox" name="tipo_propiedad" value="Comercial" class="mr-[8px] w-[20px] h-[20px] flex-shrink-0"><span class="text-edgray">Comercial</span></label>
-                                <label class="flex items-center cursor-pointer text-[14px] sm:text-[13px]"><input type="checkbox" name="tipo_propiedad" value="Industrial" class="mr-[8px] w-[20px] h-[20px] flex-shrink-0"><span class="text-edgray">Industrial</span></label>
+                              <div class="checkbox-group flex flex-col gap-[8px]">
+                                <label class="flex items-center cursor-pointer text-[14px] sm:text-[13px]"><input type="checkbox" name="tipo_propiedad" value="Casas" class="mr-[8px] w-[18px] h-[18px] flex-shrink-0"><span class="text-edgray">Casas</span></label>
+                                <label class="flex items-center cursor-pointer text-[14px] sm:text-[13px]"><input type="checkbox" name="tipo_propiedad" value="Departamentos" class="mr-[8px] w-[18px] h-[18px] flex-shrink-0"><span class="text-edgray">Departamentos</span></label>
+                                <label class="flex items-center cursor-pointer text-[14px] sm:text-[13px]"><input type="checkbox" name="tipo_propiedad" value="Terrenos" class="mr-[8px] w-[18px] h-[18px] flex-shrink-0"><span class="text-edgray">Terrenos</span></label>
+                                <label class="flex items-center cursor-pointer text-[14px] sm:text-[13px]"><input type="checkbox" name="tipo_propiedad" value="Comercial" class="mr-[8px] w-[18px] h-[18px] flex-shrink-0"><span class="text-edgray">Comercial</span></label>
+                                <label class="flex items-center cursor-pointer text-[14px] sm:text-[13px]"><input type="checkbox" name="tipo_propiedad" value="Industrial" class="mr-[8px] w-[18px] h-[18px] flex-shrink-0"><span class="text-edgray">Industrial</span></label>
                               </div>
                             </div>
-                          
+
                             <!-- 10. Operacion (multi-select con checkboxes) -->
-                            <div class="form-group col-span-2 xxs:col-span-1">
-                              <label class="font-lato font-semibold text-edblue block mb-[12px] sm:mb-[10px] sm:text-[14px]">Operacion <span class="text-red-500">*</span> (puedes elegir ambas)</label>
-                              <div class="checkbox-group">
-                                <label class="flex items-center cursor-pointer text-[14px] sm:text-[13px]"><input type="checkbox" name="operacion" value="Venta" class="mr-[8px] w-[20px] h-[20px] flex-shrink-0"><span class="text-edgray">Venta</span></label>
-                                <label class="flex items-center cursor-pointer text-[14px] sm:text-[13px]"><input type="checkbox" name="operacion" value="Renta" class="mr-[8px] w-[20px] h-[20px] flex-shrink-0"><span class="text-edgray">Renta</span></label>
+                            <div class="form-group">
+                              <label class="font-lato font-semibold text-edblue block mb-[12px] sm:mb-[10px] sm:text-[14px]">Operación <span class="text-red-500">*</span> (puedes elegir ambas)</label>
+                              <div class="checkbox-group flex flex-col gap-[8px]">
+                                <label class="flex items-center cursor-pointer text-[14px] sm:text-[13px]"><input type="checkbox" name="operacion" value="Venta" class="mr-[8px] w-[18px] h-[18px] flex-shrink-0"><span class="text-edgray">Venta</span></label>
+                                <label class="flex items-center cursor-pointer text-[14px] sm:text-[13px]"><input type="checkbox" name="operacion" value="Renta" class="mr-[8px] w-[18px] h-[18px] flex-shrink-0"><span class="text-edgray">Renta</span></label>
                               </div>
                             </div>
                           
@@ -368,11 +368,11 @@
                             <input type="hidden" name="form_id" value="postulacion_14_agentes">
                           
                             <!-- BOTON ENVIAR -->
-                            <div class="col-span-2 xxs:col-span-1">
-                                <button type="submit" class="bg-edpurple h-[55px] sm:h-[50px] xxs:h-[48px] px-[24px] sm:px-[16px] rounded-[10px] text-[16px] sm:text-[14px] font-medium text-white hover:bg-edblue w-full transition-all duration-300">
-                                  Enviar mi postulacion<span class="icon pl-[10px] sm:pl-[8px]"><i class="fa-solid fa-arrow-right-long"></i></span>
+                            <div class="col-span-2 xxs:col-span-1 flex flex-col items-center">
+                                <button type="submit" class="bg-edpurple h-[55px] sm:h-[50px] xxs:h-[48px] px-[24px] sm:px-[16px] rounded-[10px] text-[16px] sm:text-[14px] font-medium text-white hover:bg-edblue w-1/2 md:w-2/3 sm:w-full transition-all duration-300">
+                                  Enviar mi postulación<span class="icon pl-[10px] sm:pl-[8px]"><i class="fa-solid fa-arrow-right-long"></i></span>
                                 </button>
-                                <p class="texto-envio text-[12px] sm:text-[11px]">
+                                <p class="texto-envio text-[12px] sm:text-[11px] text-center">
                                   Al enviar confirmas que tu informacion es correcta y autorizas su uso editorial.
                                 </p>
                             </div>
